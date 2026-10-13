@@ -24,7 +24,7 @@ public class ScreenshotUtils {
 
 			String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
 
-			String safeName = testName.replaceAll("[^a-zA-Z0-9_-]", "_");
+			String safeName = testName.replaceAll("[^a-zA-Z0-9_-]", "-");
 
 			Path destination = folder.resolve(safeName + "_" + timestamp + ".png");
 
